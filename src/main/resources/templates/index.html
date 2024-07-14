@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Boot Demo</title>
+    <!--<link rel="stylesheet" href="static/css/stylesheet.css">-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 50px;
+            grid-template-columns: 1fr;
+        }
+        .data {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Dados da API</h1>
+    <button id="fetchData">Carregar Dados</button>
+    <div id="data" class="data"></div>
+</div>
+<!--<script src="static/js/index.js"></script>-->
+<script>
+    document.getElementById('fetchData').addEventListener('click', function() {
+        fetch('https://e40f-168-227-35-68.ngrok-free.app/api/json', {
+            method: "get",
+            headers: new Headers({
+                "ngrok-skip-browser-warning": "00000"
+            })
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const dataDiv = document.getElementById('data');
+                dataDiv.innerHTML = `
+                        <p><strong>First Name:</strong> ${data.firstName}</p>
+                        <p><strong>Middle Name:</strong> ${data.middleName}</p>
+                        <p><strong>Last Name:</strong> ${data.lastName}</p>
+                    `;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    });
+</script>
+</body>
+</html>
