@@ -1,0 +1,105 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Azul claro de fundo */
+    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px; /* Largura máxima do container */
+    margin: 20px auto; /* Centralizar na página */
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco do container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Cantos arredondados */
+}
+
+h1, h2 {
+    color: #1e90ff; /* Azul mais forte para títulos */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="date"] {
+    width: calc(100% - 10px); /* Largura total menos margens */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #1e90ff; /* Azul para botões */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #4682b4; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Estilos específicos para as informações da máquina */
+.machine-info {
+    margin-bottom: 20px;
+}
+
+.machine-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.machine-details label {
+    width: 150px; /* Largura fixa para o label */
+    font-weight: bold; /* Negrito para o label */
+    margin-right: 10px; /* Espaçamento à direita */
+    line-height: 1.5; /* Altura da linha para alinhar verticalmente com o span */
+}
+
+.machine-details span {
+    line-height: 1.5; /* Altura da linha para alinhar verticalmente */
+}
+
+
+/* Estilos específicos para o histórico de manutenção */
+.maintenance-history {
+    margin-bottom: 20px;
+}
+
+.maintenance-inputs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.maintenance-inputs label {
+    width: 150px; /* Largura fixa para os labels */
+    font-weight: bold; /* Negrito para os labels */
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    input[type="text"], input[type="date"] {
+        width: calc(100% - 20px);
+    }
+}

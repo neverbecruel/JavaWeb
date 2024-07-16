@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Manutenção</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/custom.css"> <!-- Adicionei um arquivo custom.css para estilos adicionais -->
+</head>
+<body>
+<div class="container">
+    <h1>Histórico de Manutenção de Máquinas</h1>
+
+    <div class="machine-info">
+        <h2>Informações da Máquina</h2>
+        <div class="machine-details">
+            <label>Nome da Máquina:</label>
+            <span id="machineName">{machineName}</span>
+        </div>
+    </div>
+
+    <div class="maintenance-history">
+        <h2>Registrar manutenção</h2>
+        <div class="maintenance-inputs">
+            <label for="maintenanceDate">Data da Manutenção:</label>
+            <input type="date" id="maintenanceDate">
+        </div>
+
+        <div class="maintenance-inputs">
+            <label for="maintenanceDescription">Descrição:</label>
+            <input type="text" id="maintenanceDescription" placeholder="Descrição da manutenção">
+        </div>
+
+        <button id="addMaintenance">Adicionar Manutenção</button>
+    </div>
+
+    <h2>Histórico de Manutenção da Máquina</h2>
+    <ul id="maintenanceList"></ul>
+</div>
+
+<script src="/js/ByID.js"></script>
+</body>
+</html>
