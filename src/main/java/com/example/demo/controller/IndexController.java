@@ -1,18 +1,31 @@
 package com.example.demo.controller;
 
-import com.example.demo.Jsons;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.demo.models.Maquina;
+import com.example.demo.service.MaquinaService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class IndexController {
 
-    @GetMapping("/json")
-    public Jsons index() {
-        return new Jsons("joao", "victor", "machado");
+    private final MaquinaService maquinaService;
+
+    @Autowired
+    public IndexController(MaquinaService maquinaService) {
+        this.maquinaService = maquinaService;
+    }
+
+    @PostMapping("/maquinas")
+    public Long criarMaquinas(@RequestBody Maquina maquina) {
+        try {
+            maquinaService.saveMaquina(maquina);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        System.out.println("Maquina criada com sucesso!");
+        return maquina.getId();
     }
 }
