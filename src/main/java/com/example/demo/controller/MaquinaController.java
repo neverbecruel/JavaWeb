@@ -31,6 +31,7 @@ public class MaquinaController {
 
     @GetMapping("/maquinas/{id}")
     public ResponseEntity<?> getMachineById(@PathVariable Long id) {
+
         Optional<Maquina> machineOptional = maquinaService.getMachineById(id);
         if (machineOptional.isPresent()) {
             Maquina maquina = machineOptional.get();
@@ -50,9 +51,10 @@ public class MaquinaController {
 
             // Substituir os marcadores de lugar no HTML com os dados da máquina
             htmlContent = htmlContent.replace("{machineName}", maquina.getName());
+            htmlContent = htmlContent.replace("{machinePatrimonio}", String.valueOf(maquina.getPatrimonio()));
+            htmlContent = htmlContent.replace("{machineSetor}", maquina.getSetor());
+            htmlContent = htmlContent.replace("{machineModelo}", maquina.getModelo());
             htmlContent = htmlContent.replace("{machineId}", maquina.getId().toString());
-            htmlContent = htmlContent.replace("{machineSector}", maquina.getSetor());
-            htmlContent = htmlContent.replace("{machineModel}", maquina.getModelo());
 
             // Retornar o HTML personalizado
             return ResponseEntity.ok(htmlContent);

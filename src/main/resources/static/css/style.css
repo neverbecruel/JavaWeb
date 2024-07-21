@@ -66,6 +66,13 @@ button:hover {
     border-radius: 4px;
 }
 
+ #addMachine:disabled {
+     background-color: #aaa; /* cor escura para o botão desativado */
+     cursor: not-allowed;
+ }
+
+
+
 @media (max-width: 600px) {
     .container {
         width: 100%;

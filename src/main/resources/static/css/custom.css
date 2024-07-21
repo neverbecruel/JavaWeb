@@ -26,11 +26,6 @@ h1, h2 {
     color: #1e90ff; /* Azul mais forte para títulos */
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
 input[type="text"], input[type="date"] {
     width: calc(100% - 10px); /* Largura total menos margens */
     padding: 8px;
@@ -57,25 +52,22 @@ button:hover {
 /* Estilos específicos para as informações da máquina */
 .machine-info {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .machine-details {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+    display: inline-block;
+    text-align: left;
 }
 
-.machine-details label {
-    width: 150px; /* Largura fixa para o label */
-    font-weight: bold; /* Negrito para o label */
-    margin-right: 10px; /* Espaçamento à direita */
-    line-height: 1.5; /* Altura da linha para alinhar verticalmente com o span */
+.divL {
+    font-weight: bold; /* Negrito */
 }
 
-.machine-details span {
-    line-height: 1.5; /* Altura da linha para alinhar verticalmente */
+.divL, .divS {
+    display: inline-block;
+    margin: 0;
 }
-
 
 /* Estilos específicos para o histórico de manutenção */
 .maintenance-history {
@@ -101,5 +93,13 @@ button:hover {
 
     input[type="text"], input[type="date"] {
         width: calc(100% - 20px);
+    }
+
+    .machine-details {
+        text-align: center; /* Centraliza o texto em dispositivos móveis */
+    }
+
+    .divL, .divS {
+        text-align: center; /* Centraliza o texto em dispositivos móveis */
     }
 }

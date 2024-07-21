@@ -1,4 +1,6 @@
 package com.example.demo.models;
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -9,14 +11,17 @@ public class Maquina {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @NotNull
     private String name;
+    @NotNull
     private short patrimonio;
+    @NotNull
     private String setor;
+    @NotNull
     private String modelo;
 
     // Other machine-specific attributes
-
+    @NotNull
     @OneToMany(mappedBy = "machine", cascade = CascadeType.ALL)
     private List<Manutencao> maintenanceRecords;
 

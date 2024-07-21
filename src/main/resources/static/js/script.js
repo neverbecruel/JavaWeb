@@ -2,9 +2,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const machineNameInput = document.getElementById('machineName');
     const machineSectorInput = document.getElementById('machineSector');
     const machineModelInput = document.getElementById('machineModel');
-    const machinePatrimonioInput = document.getElementById('machinePatrimonio')
+    const machinePatrimonioInput = document.getElementById('machinePatrimonio');
+    const addMachineButton = document.getElementById('addMachine');
 
-    document.getElementById('addMachine').addEventListener('click', function() {
+    function validateForm() {
+        return machineNameInput.value.trim() !== '' &&
+            machineSectorInput.value.trim() !== '' &&
+            machineModelInput.value.trim() !== '' &&
+            machinePatrimonioInput.value.trim() !== '';
+    }
+
+    function updateButtonState() {
+        addMachineButton.disabled = !validateForm();
+    }
+
+    machineNameInput.addEventListener('input', updateButtonState);
+    machineSectorInput.addEventListener('input', updateButtonState);
+    machineModelInput.addEventListener('input', updateButtonState);
+    machinePatrimonioInput.addEventListener('input', updateButtonState);
+
+    addMachineButton.addEventListener('click', function() {
+        if (!validateForm()) {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+
         const machineData = {
             name: machineNameInput.value,
             setor: machineSectorInput.value,
@@ -34,4 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Erro ao adicionar máquina. Verifique o console para mais detalhes.');
             });
     });
+
+    // Inicializa o estado do botão de envio
+    updateButtonState();
 });

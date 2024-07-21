@@ -1,5 +1,6 @@
 package com.example.demo.models;
 
+import com.sun.istack.NotNull;
 import org.apache.logging.log4j.message.StringFormattedMessage;
 
 import javax.persistence.*;
@@ -11,13 +12,15 @@ public class Manutencao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @NotNull
     private LocalDate date;
-
+    @NotNull
     private String description;
+    @NotNull
     private String setor;
+    @NotNull
     private String modelo;
-
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "machine_id")
     private Maquina machine;
