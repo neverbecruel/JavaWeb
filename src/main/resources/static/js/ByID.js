@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const maintenanceData = {
             data: maintenanceDateInput.value,
             descricao: maintenanceDescriptionInput.value,
-            id: idMachineInput.value
+            id: idMachineInput.textContent.trim()
         };
 
-        fetch('http://localhost:8001/api/postManutencao', {
+        fetch('/api/postManutencao', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

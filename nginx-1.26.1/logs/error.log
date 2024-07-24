@@ -1,0 +1,31 @@
+2024/07/21 15:37:33 [warn] 14576#19100: server name "https://cb5a-45-6-150-235.ngrok-free.app" has suspicious symbols in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:37
+2024/07/21 15:37:33 [warn] 9920#5928: server name "https://cb5a-45-6-150-235.ngrok-free.app" has suspicious symbols in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:37
+2024/07/21 15:41:01 [warn] 18296#21148: server name "https://cb5a-45-6-150-235.ngrok-free.app" has suspicious symbols in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:37
+2024/07/21 15:41:01 [emerg] 18296#21148: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 15:41:03 [warn] 15312#19588: server name "https://cb5a-45-6-150-235.ngrok-free.app" has suspicious symbols in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:37
+2024/07/21 15:41:03 [emerg] 15312#19588: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 15:41:06 [warn] 21384#20972: server name "https://cb5a-45-6-150-235.ngrok-free.app" has suspicious symbols in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:37
+2024/07/21 15:41:06 [emerg] 21384#20972: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 15:41:19 [warn] 20824#17736: server name "https://cb5a-45-6-150-235.ngrok-free.app" has suspicious symbols in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:37
+2024/07/21 15:41:19 [emerg] 20824#17736: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:08:28 [emerg] 9616#21364: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:08:43 [emerg] 2808#13328: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:09:11 [emerg] 7856#18244: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:09:41 [warn] 17728#18996: server name "https://4672-45-6-150-235.ngrok-free.app" has suspicious symbols in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:37
+2024/07/21 17:09:41 [emerg] 17728#18996: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:09:55 [emerg] 3928#10660: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:11:33 [emerg] 16248#17800: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:11:43 [emerg] 17720#10404: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:12:35 [emerg] 15764#20968: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:13:37 [emerg] 17540#9844: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:13:58 [emerg] 12332#21392: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:14:05 [emerg] 18596#10008: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:14:57 [emerg] 15084#19484: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:15:01 [emerg] 15668#5548: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:24:28 [emerg] 7372#20968: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:27:31 [emerg] 4180#19944: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:30:44 [emerg] 20764#18376: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:32:10 [emerg] 13492#20400: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:32:19 [emerg] 20800#18292: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:33:11 [emerg] 18376#20048: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/21 17:34:49 [emerg] 16380#14496: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48

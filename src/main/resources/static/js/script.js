@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             patrimonio: parseInt(machinePatrimonioInput.value),
         };
 
-        fetch('http://localhost:8001/api/maquinas', {
+        fetch('/api/maquinas', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -48,8 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(data => {
-                // Redirecionar para a página da máquina específica usando o ID retornado
-                window.location.href = `http://localhost:8001/maquinas/${data}`;
+                if(data === -1){
+                    alert("Patrimonio " + parseInt(machinePatrimonioInput.value) + " já existe.")
+                }else {
+                    // Redirecionar para a página da máquina específica usando o ID retornado
+                    window.location.href = `/maquinas/${data}`;
+                }
+
             })
             .catch(error => {
                 console.error('Erro:', error);

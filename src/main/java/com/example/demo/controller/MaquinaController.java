@@ -28,7 +28,7 @@ public class MaquinaController {
     public MaquinaController(MaquinaService maquinaService) {
         this.maquinaService = maquinaService;
     }
-
+    @CrossOrigin(origins = "*")
     @GetMapping("/maquinas/{id}")
     public ResponseEntity<?> getMachineById(@PathVariable Long id) {
 

@@ -17,13 +17,10 @@ public class Manutencao {
     @NotNull
     private String description;
     @NotNull
-    private String setor;
-    @NotNull
-    private String modelo;
-    @NotNull
     @ManyToOne
     @JoinColumn(name = "machine_id")
     private Maquina machine;
+
 
     // Getters and Setters
     public Long getId() {

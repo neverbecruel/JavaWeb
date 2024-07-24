@@ -13,14 +13,14 @@ public class Maquina {
     private Long id;
     @NotNull
     private String name;
-    @NotNull
+    @Column(unique = true, nullable = false)
     private short patrimonio;
     @NotNull
     private String setor;
     @NotNull
     private String modelo;
 
-    // Other machine-specific attributes
+
     @NotNull
     @OneToMany(mappedBy = "machine", cascade = CascadeType.ALL)
     private List<Manutencao> maintenanceRecords;

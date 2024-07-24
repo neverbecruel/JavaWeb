@@ -19,8 +19,12 @@ public class IndexController {
 
     @PostMapping("/maquinas")
     public Long criarMaquinas(@RequestBody Maquina maquina) {
-        maquinaService.saveMaquina(maquina);
-        System.out.println("Maquina criada com sucesso!");
+        try{maquinaService.saveMaquina(maquina);
+        } catch(Exception e){
+            return -1l;
+        }
+
+        System.out.println("Maquina"+ maquina.getId() +" criada com sucesso!");
         return maquina.getId();
     }
 }
