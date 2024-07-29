@@ -1,3 +1,4 @@
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
@@ -28,9 +29,10 @@ h1, h2 {
 label {
     display: block;
     margin: 10px 0 5px;
+    font-weight: bold;
 }
 
-input[type="text"], input[type="date"] {
+input[type="text"], input[type="number"] {
     width: calc(100% - 20px);
     padding: 8px;
     margin-bottom: 10px;
@@ -53,33 +55,13 @@ button:hover {
     background-color: #4682b4;
 }
 
-#maintenanceList {
-    list-style-type: none;
-    padding: 0;
-}
-
-#maintenanceList li {
-    background-color: #f0f8ff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 4px;
-}
-
- #addMachine:disabled {
-     background-color: #aaa; /* cor escura para o botão desativado */
-     cursor: not-allowed;
- }
-
-
-
 @media (max-width: 600px) {
     .container {
         width: 100%;
         padding: 10px;
     }
 
-    input[type="text"], input[type="date"] {
+    input[type="text"], input[type="number"] {
         width: calc(100% - 20px);
     }
 }

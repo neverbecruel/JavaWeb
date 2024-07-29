@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Nova Máquina</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 <div class="container">
@@ -12,23 +12,30 @@
 
     <div class="machine-info">
         <h2>Informações da Máquina</h2>
-        <label for="machineName">Nome da Máquina:</label>
-        <input type="text" id="machineName" placeholder="Digite o nome da máquina">
+
+        <label for="machineNumero">Número da Máquina:</label>
+        <input type="number" id="machineNumero" placeholder="Digite o número da máquina">
 
         <label for="machineSector">Setor:</label>
         <input type="text" id="machineSector" placeholder="Digite o setor da máquina">
 
-        <label for="machinePatrimonio">Patrimonio:</label>
-        <input type="number" id="machinePatrimonio" placeholder="Digite o patrimonio da máquina">
+        <label for="machinePatrimonio">Patrimônio:</label>
+        <input type="number" id="machinePatrimonio" placeholder="Digite o patrimônio da máquina">
 
         <label for="machineModel">Modelo:</label>
         <input type="text" id="machineModel" placeholder="Digite o modelo da máquina">
+
+        <label for="machineAgulhagem">Agulhagem:</label>
+        <input type="number" id="machineAgulhagem" placeholder="Digite a agulhagem" min="1" max="100">
+
+        <label for="machineDiametro">Diâmetro:</label>
+        <input type="number" id="machineDiametro" placeholder="Digite o diâmetro" min="1" max="100">
 
         <button id="addMachine">Adicionar Máquina</button>
     </div>
 
 </div>
 
-<script src="js/script.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

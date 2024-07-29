@@ -24,9 +24,7 @@ function maintenanceById() {
             // Ordena os dados por data de manutenção em ordem decrescente
             data.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-
             maintenanceList.innerHTML = '';
-
 
             data.forEach(maintenance => {
                 console.log('Maintenance item:', maintenance);
@@ -76,7 +74,7 @@ function addMaintenance() {
                 console.log('Descrição da manutenção:', maintenanceDescriptionInput.value);
                 return response.json();
             })
-            .then(data => {
+            .then(() => {
                 maintenanceDateInput.value = '';
                 maintenanceDescriptionInput.value = '';
 

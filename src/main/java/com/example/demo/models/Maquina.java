@@ -13,13 +13,18 @@ public class Maquina {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
-    private String name;
+    private short numeroMaquina;
     @Column(unique = true, nullable = false)
     private int patrimonio;
     @NotNull
     private String setor;
     @NotNull
     private String modelo;
+    @NotNull
+    private short agulhagem;
+    @NotNull
+    private byte diametro;
+
 
 
     @NotNull
@@ -36,12 +41,12 @@ public class Maquina {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public short getNumeroMaquina() {
+        return numeroMaquina;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNumeroMaquina(short numeroMaquina) {
+        this.numeroMaquina = numeroMaquina;
     }
 
     public void setSetor(String setor) {this.setor = setor;}
@@ -51,6 +56,22 @@ public class Maquina {
     public String getModelo() {return modelo;}
 
     public void setModelo(String modelo) {this.modelo = modelo;}
+
+    public short getAgulhagem() {
+        return agulhagem;
+    }
+
+    public void setAgulhagem(short agulhagem) {
+        this.agulhagem = agulhagem;
+    }
+
+    public byte getDiametro() {
+        return diametro;
+    }
+
+    public void setDiametro(byte diametro) {
+        this.diametro = diametro;
+    }
 
     public int getPatrimonio(){return patrimonio;}
     public void setPatrimonio(int patrimonio){this.patrimonio = patrimonio;}

@@ -21,11 +21,14 @@ public class IndexController {
     public Long criarMaquinas(@RequestBody Maquina maquina) {
         try{maquinaService.saveMaquina(maquina);
         } catch(Exception e){
-            System.out.println(e.getMessage());
+            System.out.println(e.getCause());
             return -1l;
         }
 
         System.out.println("Maquina"+ maquina.getId() +" criada com sucesso!");
+        System.out.println("Agulhagem: " + maquina.getAgulhagem());
+        System.out.println("Diametro: " + maquina.getDiametro());
+        System.out.println("Numero: " + maquina.getNumeroMaquina() );
         return maquina.getId();
     }
 }

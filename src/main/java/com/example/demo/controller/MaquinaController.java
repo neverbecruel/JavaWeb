@@ -50,7 +50,7 @@ public class MaquinaController {
             }
 
             // Substituir os marcadores de lugar no HTML com os dados da máquina
-            htmlContent = htmlContent.replace("{machineName}", maquina.getName());
+            htmlContent = htmlContent.replace("{machineNumero}", String.valueOf(maquina.getNumeroMaquina()));
             htmlContent = htmlContent.replace("{machinePatrimonio}", String.valueOf(maquina.getPatrimonio()));
             htmlContent = htmlContent.replace("{machineSetor}", maquina.getSetor());
             htmlContent = htmlContent.replace("{machineModelo}", maquina.getModelo());
