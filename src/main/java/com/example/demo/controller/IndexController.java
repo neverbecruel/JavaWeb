@@ -21,6 +21,7 @@ public class IndexController {
     public Long criarMaquinas(@RequestBody Maquina maquina) {
         try{maquinaService.saveMaquina(maquina);
         } catch(Exception e){
+            System.out.println(e.getMessage());
             return -1l;
         }
 

@@ -1,4 +1,5 @@
 package com.example.demo.models;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
@@ -14,7 +15,7 @@ public class Maquina {
     @NotNull
     private String name;
     @Column(unique = true, nullable = false)
-    private short patrimonio;
+    private int patrimonio;
     @NotNull
     private String setor;
     @NotNull
@@ -23,6 +24,7 @@ public class Maquina {
 
     @NotNull
     @OneToMany(mappedBy = "machine", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Manutencao> maintenanceRecords;
 
     // Getters and Setters
@@ -50,8 +52,8 @@ public class Maquina {
 
     public void setModelo(String modelo) {this.modelo = modelo;}
 
-    public short getPatrimonio(){return patrimonio;}
-    public void setPatrimonio(short patrimonio){this.patrimonio = patrimonio;}
+    public int getPatrimonio(){return patrimonio;}
+    public void setPatrimonio(int patrimonio){this.patrimonio = patrimonio;}
 
     public List<Manutencao> getMaintenanceRecords() {
         return maintenanceRecords;

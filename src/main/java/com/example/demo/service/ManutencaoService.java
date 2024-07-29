@@ -2,10 +2,11 @@ package com.example.demo.service;
 
 import com.example.demo.models.Manutencao;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface ManutencaoService {
     Manutencao saveManutencao(Manutencao manutencao);
-    Optional<Manutencao> getManutencaoById(Long id);
+    List<Manutencao> getManutencoesById(Long machineID);
 
 }

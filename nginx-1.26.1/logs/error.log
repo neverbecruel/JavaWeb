@@ -29,3 +29,56 @@
 2024/07/21 17:32:19 [emerg] 20800#18292: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
 2024/07/21 17:33:11 [emerg] 18376#20048: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
 2024/07/21 17:34:49 [emerg] 16380#14496: invalid URL prefix in D:\projetos\JAVA\javWeb\nginx-1.26.1/conf/nginx.conf:48
+2024/07/28 16:25:25 [emerg] 2092#11284: CreateDirectory() "D:\Projetos\java\JavaWeb\nginx-1.26.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/07/28 16:26:44 [emerg] 6220#12372: CreateDirectory() "D:\projetos\java\javaweb\nginx-1.26.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/07/28 16:26:47 [emerg] 3184#10204: CreateDirectory() "D:\projetos\java\javaweb\nginx-1.26.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/07/28 16:29:46 [emerg] 7888#9960: CreateDirectory() "D:\projetos\java\javaweb\nginx-1.26.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/07/28 16:29:57 [emerg] 2144#4252: CreateDirectory() "D:\Projetos\java\JavaWeb\nginx-1.26.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/07/28 16:31:08 [emerg] 8328#7472: CreateDirectory() "D:\Projetos\java\JavaWeb\nginx-1.26.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/07/28 16:31:51 [emerg] 13072#3940: CreateDirectory() "D:\Projetos\java\JavaWeb\nginx-1.26.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/07/28 16:32:41 [emerg] 7608#9012: CreateDirectory() "D:\Projetos\java\JavaWeb\nginx-1.26.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/07/28 16:33:32 [emerg] 14508#10804: CreateDirectory() "D:\projetos\java\javaweb\nginx-1.26.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/07/28 16:42:35 [emerg] 13168#5100: CreateDirectory() "D:\projetos\java\javaweb\nginx-1.26.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/07/28 16:43:51 [emerg] 6980#6704: CreateDirectory() "D:\Projetos\java\JavaWeb\nginx-1.26.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/07/28 16:46:23 [warn] 10680#14464: "user" is not supported, ignored in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:1
+2024/07/28 16:46:23 [emerg] 10680#14464: CreateDirectory() "D:\projetos\java\javaweb\nginx-1.26.1/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2024/07/28 16:49:37 [warn] 13188#2604: "user" is not supported, ignored in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:1
+2024/07/28 16:49:37 [notice] 13188#2604: using the "select" event method
+2024/07/28 16:49:37 [notice] 13188#2604: using the "select" event method
+2024/07/28 16:49:37 [notice] 13188#2604: nginx/1.26.1
+2024/07/28 16:49:37 [notice] 13188#2604: nginx/1.26.1
+2024/07/28 16:49:37 [info] 13188#2604: OS: 260200 build:9200, "", suite:100, type:1
+2024/07/28 16:49:37 [notice] 13188#2604: start worker processes
+2024/07/28 16:49:37 [notice] 13188#2604: start worker processes
+2024/07/28 16:49:37 [notice] 13188#2604: start worker process 3804
+2024/07/28 16:49:37 [notice] 13188#2604: start worker process 3804
+2024/07/28 16:49:37 [warn] 3804#8012: "user" is not supported, ignored in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:1
+2024/07/28 16:49:37 [notice] 3804#8012: nginx/1.26.1
+2024/07/28 16:49:37 [notice] 3804#8012: nginx/1.26.1
+2024/07/28 16:49:37 [info] 3804#8012: OS: 260200 build:9200, "", suite:100, type:1
+2024/07/28 16:49:37 [notice] 3804#8012: create thread 3012
+2024/07/28 16:49:37 [notice] 3804#8012: create thread 3012
+2024/07/28 16:49:37 [notice] 3804#8012: create thread 84
+2024/07/28 16:49:37 [notice] 3804#8012: create thread 84
+2024/07/28 16:49:37 [notice] 3804#8012: create thread 11812
+2024/07/28 16:49:37 [notice] 3804#8012: create thread 11812
+2024/07/28 16:50:43 [warn] 15128#1380: "user" is not supported, ignored in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:1
+2024/07/28 16:52:57 [error] 3804#3012: *1 "D:\projetos\java\javaweb\nginx-1.26.1/src/main/resources/static/index.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: 5791-2804-c30-fdc-a100-876-feab-cf5-147c.ngrok-free.app, request: "GET / HTTP/1.1", host: "localhost"
+2024/07/28 16:52:57 [error] 3804#3012: *1 "D:\projetos\java\javaweb\nginx-1.26.1/src/main/resources/static/index.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: 5791-2804-c30-fdc-a100-876-feab-cf5-147c.ngrok-free.app, request: "GET / HTTP/1.1", host: "localhost"
+2024/07/28 16:52:57 [error] 3804#3012: *1 "D:\projetos\java\javaweb\nginx-1.26.1/src/main/resources/static/index.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: 5791-2804-c30-fdc-a100-876-feab-cf5-147c.ngrok-free.app, request: "GET / HTTP/1.1", host: "localhost"
+2024/07/28 16:52:57 [error] 3804#3012: *1 CreateFile() "D:\projetos\java\javaweb\nginx-1.26.1/src/main/resources/static/favicon.ico" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: 5791-2804-c30-fdc-a100-876-feab-cf5-147c.ngrok-free.app, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2024/07/28 16:52:57 [error] 3804#3012: *1 CreateFile() "D:\projetos\java\javaweb\nginx-1.26.1/src/main/resources/static/favicon.ico" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: 5791-2804-c30-fdc-a100-876-feab-cf5-147c.ngrok-free.app, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2024/07/28 16:52:57 [error] 3804#3012: *1 CreateFile() "D:\projetos\java\javaweb\nginx-1.26.1/src/main/resources/static/favicon.ico" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: 5791-2804-c30-fdc-a100-876-feab-cf5-147c.ngrok-free.app, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2024/07/28 16:53:57 [info] 3804#3012: *2 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:80
+2024/07/28 16:53:57 [info] 3804#3012: *3 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:80
+2024/07/28 16:54:01 [notice] 11400#1796: signal process started
+2024/07/28 16:54:01 [notice] 13188#2604: reconfiguring
+2024/07/28 16:54:01 [notice] 13188#2604: reconfiguring
+2024/07/28 16:54:01 [notice] 3804#8012: gracefully shutting down
+2024/07/28 16:54:01 [notice] 3804#8012: gracefully shutting down
+2024/07/28 16:54:01 [notice] 3804#84: exiting
+2024/07/28 16:54:01 [notice] 3804#84: exiting
+2024/07/28 16:54:02 [notice] 3804#3012: exiting
+2024/07/28 16:54:02 [notice] 3804#3012: exiting
+2024/07/28 16:54:02 [notice] 3804#8012: exit
+2024/07/28 16:54:02 [notice] 3804#8012: exit

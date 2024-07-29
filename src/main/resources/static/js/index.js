@@ -1,5 +1,5 @@
 document.getElementById('fetchData').addEventListener('click', function() {
-    fetch('https://e40f-168-227-35-68.ngrok-free.app/api/json', {
+    fetch('p/api/json', {
         method: "get",
         headers: new Headers({
             "ngrok-skip-browser-warning": "00000"
