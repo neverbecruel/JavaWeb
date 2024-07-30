@@ -7,91 +7,85 @@ document.addEventListener('DOMContentLoaded', () => {
     const machineDiametroInput = document.getElementById('machineDiametro');
     const addMachineButton = document.getElementById('addMachine');
 
-    const MAX_PATRIMONIO = 2000000000; // Define the maximum allowed value for patrimonio
+    const MAX_PATRIMONIO = 2000000000;
 
-    function validateForm() {
+    function validateFields() {
+        if (machineNumeroInput.value.trim() === '') {
+            showAlert('Machine number is required.');
+            machineNumeroInput.focus();
+            return false;
+        }
+        if (machineSectorInput.value.trim() === '') {
+            showAlert('Machine sector is required.');
+            machineSectorInput.focus();
+            return false;
+        }
+        if (machineModelInput.value.trim() === '') {
+            showAlert('Machine model is required.');
+            machineModelInput.focus();
+            return false;
+        }
         const patrimonio = parseInt(machinePatrimonioInput.value);
-
-        return machineNumeroInput.value.trim() !== '' &&
-            machineSectorInput.value.trim() !== '' &&
-            machineModelInput.value.trim() !== '' &&
-            !isNaN(patrimonio) &&
-            patrimonio <= MAX_PATRIMONIO &&
-            machineAgulhagemInput.value.trim() !== '' &&
-            machineDiametroInput.value.trim() !== '';
-    }
-
-    function updateButtonState() {
-        addMachineButton.disabled = !validateForm();
+        if (isNaN(patrimonio) || patrimonio > MAX_PATRIMONIO) {
+            showAlert('Patrimônio must be a number and cannot be greater than 2 billion.');
+            machinePatrimonioInput.focus();
+            return false;
+        }
+        if (machineAgulhagemInput.value.trim() === '') {
+            showAlert('Machine agulhagem is required.');
+            machineAgulhagemInput.focus();
+            return false;
+        }
+        if (machineDiametroInput.value.trim() === '') {
+            showAlert('Machine diametro is required.');
+            machineDiametroInput.focus();
+            return false;
+        }
+        return true;
     }
 
     function showAlert(message) {
         alert(message);
     }
 
-    machinePatrimonioInput.addEventListener('input', () => {
-        const patrimonio = parseInt(machinePatrimonioInput.value);
-        if (patrimonio > MAX_PATRIMONIO) {
-            showAlert('Patrimônio cannot be greater than 2 billion.');
-        }
-        updateButtonState();
-    });
-
-    machineNumeroInput.addEventListener('input', updateButtonState);
-    machineSectorInput.addEventListener('input', updateButtonState);
-    machineModelInput.addEventListener('input', updateButtonState);
-    machineAgulhagemInput.addEventListener('input', updateButtonState);
-    machineDiametroInput.addEventListener('input', updateButtonState);
-
     addMachineButton.addEventListener('click', () => {
-        if (!validateForm()) {
-            const patrimonio = parseInt(machinePatrimonioInput.value);
-            if (patrimonio > MAX_PATRIMONIO) {
-                showAlert('Patrimônio cannot be greater than 2 billion.');
-            } else {
-                showAlert('Please fill in all fields correctly.');
-            }
-            return;
-        }
+        if (validateFields()) {
+            const machineData = {
+                numeroMaquina: parseInt(machineNumeroInput.value),
+                setor: machineSectorInput.value,
+                modelo: machineModelInput.value,
+                patrimonio: parseInt(machinePatrimonioInput.value),
+                agulhagem: parseInt(machineAgulhagemInput.value),
+                diametro: parseInt(machineDiametroInput.value)
+            };
 
-        const machineData = {
-            numeroMaquina: parseInt(machineNumeroInput.value),
-            setor: machineSectorInput.value,
-            modelo: machineModelInput.value,
-            patrimonio: parseInt(machinePatrimonioInput.value),
-            agulhagem: parseInt(machineAgulhagemInput.value),
-            diametro: parseInt(machineDiametroInput.value)
-        };
-
-        fetch('/api/maquinas', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(machineData),
-        })
-            .then(response => response.json().then(data => ({ status: response.status, body: data })))
-            .then(result => {
-                if (result.status === 201) {
-                    // Redirect to the machine's page
-                    window.location.href = `/maquinas/${result.body}`;
-                } else if (result.status === 400) {
-                    // Display validation error message
-                    showAlert(result.body);
-                } else if (result.status === 500) {
-                    // Display server error message
-                    showAlert("An error occurred while adding the machine. Check the console for details.");
-                } else {
-                    // Handle unexpected status
-                    showAlert("Unexpected response status: " + result.status);
-                }
+            fetch('/api/maquinas', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(machineData),
             })
-            .catch(error => {
-                console.error('Error:', error);
-                showAlert('Error adding machine. Check the console for details.');
-            });
+                .then(response => response.json().then(data => ({ status: response.status, body: data })))
+                .then(result => {
+                    if (result.status === 201) {
+                        // Redirect to the machine's page
+                        window.location.href = `/maquinas/${result.body}`;
+                    } else if (result.status === 400) {
+                        // Display validation error message
+                        showAlert(result.body);
+                    } else if (result.status === 500) {
+                        // Display server error message
+                        showAlert("An error occurred while adding the machine. Check the console for details.");
+                    } else {
+                        // Handle unexpected status
+                        showAlert("Unexpected response status: " + result.status);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showAlert('Error adding machine. Check the console for details.');
+                });
+        }
     });
-
-    // Initialize button state
-    updateButtonState();
 });
