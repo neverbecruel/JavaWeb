@@ -1,14 +1,18 @@
 /* Estilos gerais */
-body {
+html, body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     color: #333;
     margin: 0;
     padding: 0;
+    height: 110%; /* Garante que o body ocupe toda a altura */
+
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     text-align: center;
 }
 
@@ -22,16 +26,20 @@ body {
     border-radius: 8px;
 }
 
+/* Cabeçalhos */
 h1, h2 {
     color: #1e90ff;
+    margin-bottom: 20px;
 }
 
+/* Labels */
 label {
     display: block;
     margin: 10px 0 5px;
     font-weight: bold;
 }
 
+/* Inputs */
 input[type="text"], input[type="number"] {
     width: calc(100% - 20px);
     padding: 8px;
@@ -41,6 +49,7 @@ input[type="text"], input[type="number"] {
     box-sizing: border-box;
 }
 
+/* Botão */
 button {
     background-color: #1e90ff;
     color: white;
@@ -49,19 +58,48 @@ button {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
+    font-size: 16px;
 }
 
 button:hover {
     background-color: #4682b4;
 }
 
+
+/* Toast */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none; /* Inicialmente escondido */
+    z-index: 1000;
+    font-size: 14px;
+}
+
+.toast.show {
+    display: block;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Responsividade */
 @media (max-width: 600px) {
     .container {
         width: 100%;
         padding: 10px;
     }
 
-    input[type="text"], input[type="number"] {
-        width: calc(100% - 20px);
-    }
-}
+    input[type="text"], input[type="number"] {}}
