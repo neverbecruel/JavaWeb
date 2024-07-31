@@ -100,6 +100,80 @@ button:hover {
     font-weight: bold;
 }
 
+/* Estilos do Modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); /* Preto com transparência */
+    text-align: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Ajustado para uma melhor centralização */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Ajusta a largura do modal */
+    max-width: 500px; /* Tamanho máximo do modal */
+    max-height: 80vh; /* Altura máxima do modal ajustada para não ficar muito grande */
+    position: relative;
+    text-align: center; /* Centraliza o conteúdo do modal */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+    overflow: hidden; /* Remove a rolagem */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+.modal-content #qrcode {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    max-width: 100%; /* Ajusta a largura do QR code para caber melhor no modal */
+    max-height: 60vh; /* Limita a altura máxima do QR code */
+    margin-bottom: 20px; /* Espaçamento abaixo do QR code */
+}
+
+.modal-content .qrcode-text {
+    margin-bottom: 10px; /* Espaçamento abaixo do texto */
+}
+
+.modal-content button {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block; /* Garante que o botão esteja alinhado corretamente */
+}
+
+.modal-content button:hover {
+    background-color: #4682b4;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    right: 10px; /* Ajusta o botão de fechar para a direita */
+    top: 10px; /* Ajusta o botão de fechar para o topo */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Responsividade */
 @media (max-width: 600px) {
     .container {
         width: 100%;
@@ -117,4 +191,31 @@ button:hover {
     .divL, .divS {
         text-align: center;
     }
+
+    .modal-content {
+        width: 90%; /* Ajusta a largura do modal em telas pequenas */
+        height: 70%;
+        max-width: 90%; /* Limita a largura máxima em telas pequenas */
+        max-height: 80vh; /* Ajusta a altura máxima para não ocupar toda a tela */
+        overflow-y: auto; /* Permite rolagem vertical se necessário */
+    }
+
+    .modal-content #qrcode {
+        max-width: 100%; /* Ajusta a largura do QR code em telas pequenas */
+        max-height: 50vh; /* Limita a altura máxima do QR code em telas pequenas */
+    }
+
+/* Estilos para impressão */
+@media print {
+    body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; }
+    #printContent { display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0; }
+    img { width: 300px; height: 300px; } /* Ajusta o tamanho do QR code na impressão */
 }
+
+/* Estilos para tela */
+@media screen {
+    #printContent { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+    img { max-width: 100%; max-height: 60vh; }
+}
+}
+

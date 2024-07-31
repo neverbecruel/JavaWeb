@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histórico de Manutenção</title>
     <link rel="stylesheet" href="/css/ByID.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -23,8 +25,17 @@
 
     <div class="qr-image">
         <button id="generateQR">GERAR QR</button>
-        <div id="qrcode"></div>
-    </div>
+        <!-- Modal -->
+        <div id="qrcodeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="qrcodeText" class="qrcode-text"></div>
+                <div id="qrcode"></div>
+                <button id="printQR">Imprimir QR Code</button>
+            </div>
+            <iframe id="printFrame" style="display:none;"></iframe>
+        </div>
+
 
     <div class="maintenance-history">
         <h2>Registrar manutenção</h2>
@@ -46,6 +57,7 @@
 </div>
 
 <script src="/js/maintenanceById.js"></script>
+<script src="/js/QrCode.js"></script>
 
 </body>
 </html>
