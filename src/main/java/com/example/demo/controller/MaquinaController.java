@@ -55,6 +55,8 @@ public class MaquinaController {
             htmlContent = htmlContent.replace("{machineSetor}", maquina.getSetor());
             htmlContent = htmlContent.replace("{machineModelo}", maquina.getModelo());
             htmlContent = htmlContent.replace("{machineId}", maquina.getId().toString());
+            htmlContent = htmlContent.replace("{machineAgulhagem}",String.valueOf(maquina.getAgulhagem()));
+            htmlContent = htmlContent.replace("{machineDiametro}", String.valueOf(maquina.getDiametro()));
 
             // Retornar o HTML personalizado
             return ResponseEntity.ok(htmlContent);

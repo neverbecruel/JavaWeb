@@ -76,35 +76,6 @@ button:hover {
 }
 
 
-/* Toast */
-.toast {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: none; /* Inicialmente escondido */
-    z-index: 1000;
-    font-size: 14px;
-}
-
-.toast.show {
-    display: block;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeout {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
 /* Responsividade */
 @media (max-width: 600px) {
     .container {

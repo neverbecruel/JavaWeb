@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histórico de Manutenção</title>
     <link rel="stylesheet" href="/css/ByID.css">
+    <link rel="stylesheet" href="/css/maintenanceStyles.css">
+    <link rel="stylesheet" href="/css/toast.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
@@ -16,10 +18,12 @@
         <h2>Informações da Máquina</h2>
         <div class="machine-details">
             <p><span class="divL">ID da Máquina:</span> <span class="divS" id="machineId">{machineId}</span></p>
-            <p><span class="divL">Nome da Máquina:</span> <span class="divS" id="machineNumero">{machineNumero}</span></p>
-            <p><span class="divL">Modelo da Máquina:</span> <span class="divS" id="machineModelo">{machineModelo}</span></p>
-            <p><span class="divL">Patrimonio da Máquina:</span> <span class="divS" id="machinePatrimonio">{machinePatrimonio}</span></p>
-            <p><span class="divL">Setor da Máquina:</span> <span class="divS" id="machineSetor">{machineSetor}</span></p>
+            <p><span class="divL">Número:</span> <span class="divS" id="machineNumero">{machineNumero}</span></p>
+            <p><span class="divL">Modelo:</span> <span class="divS" id="machineModelo">{machineModelo}</span></p>
+            <p><span class="divL">Agulhagem:</span> <span class="divS" id="machineAgulhagem">{machineAgulhagem}</span></p>
+            <p><span class="divL">Diâmetro:</span> <span class="divS" id="machineDiametro">{machineDiametro}</span></p>
+            <p><span class="divL">Patrimonio:</span> <span class="divS" id="machinePatrimonio">{machinePatrimonio}</span></p>
+            <p><span class="divL">Setor:</span> <span class="divS" id="machineSetor">{machineSetor}</span></p>
         </div>
     </div>
 
@@ -45,8 +49,8 @@
         </div>
 
         <div class="maintenance-inputs">
-            <label for="maintenanceDescription">Descrição:</label>
-            <input type="text" id="maintenanceDescription" placeholder="Descrição da manutenção">
+            <label for="maintenanceDescription">Procedimento:</label>
+            <input type="text" id="maintenanceDescription" placeholder="Procedimento da manutenção">
         </div>
 
         <button id="addMaintenance">Adicionar Manutenção</button>
@@ -54,6 +58,9 @@
 
     <h2>Histórico de Manutenção da Máquina</h2>
     <ul id="maintenanceList"></ul>
+</div>
+    <!-- Toast message -->
+    <div id="toast" class="toast"></div>
 </div>
 
 <script src="/js/maintenanceById.js"></script>
