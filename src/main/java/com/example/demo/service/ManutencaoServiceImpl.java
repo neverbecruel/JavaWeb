@@ -28,4 +28,5 @@ public class ManutencaoServiceImpl implements ManutencaoService {
     public List<Manutencao> getManutencoesById(Long machineId) {
         return manutencaoRepository.findByMachineId(machineId);
     }
+
 }

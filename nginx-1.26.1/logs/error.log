@@ -82,3 +82,20 @@
 2024/07/28 16:54:02 [notice] 3804#3012: exiting
 2024/07/28 16:54:02 [notice] 3804#8012: exit
 2024/07/28 16:54:02 [notice] 3804#8012: exit
+2024/08/01 18:38:51 [emerg] 10024#6200: unknown log format "main" in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:30
+2024/08/01 18:41:22 [emerg] 15788#9860: no "events" section in configuration
+2024/08/01 18:42:45 [warn] 14696#15832: "user" is not supported, ignored in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:1
+2024/08/01 18:42:45 [warn] 15656#16256: "user" is not supported, ignored in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:1
+2024/08/01 18:47:43 [warn] 6452#17052: "user" is not supported, ignored in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:1
+2024/08/01 18:47:43 [emerg] 6452#17052: duplicate location "/" in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:34
+2024/08/01 18:48:16 [warn] 7416#7120: "user" is not supported, ignored in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:1
+2024/08/01 18:48:16 [emerg] 7416#7120: duplicate location "/" in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:34
+2024/08/01 18:49:05 [warn] 16832#16212: "user" is not supported, ignored in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:1
+2024/08/01 18:49:05 [warn] 16548#7104: "user" is not supported, ignored in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:1
+2024/08/01 18:53:12 [warn] 7464#17252: "user" is not supported, ignored in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:1
+2024/08/01 18:53:12 [warn] 5584#16288: "user" is not supported, ignored in D:\projetos\java\javaweb\nginx-1.26.1/conf/nginx.conf:1
+2024/08/01 19:01:36 [error] 7144#16552: *1 "D:\projetos\java\javaweb\nginx-1.26.1/src/main/resources/static/RealIndex.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "8919-2804-c30-fb1-8f00-e837-2cb5-cad2-84fa.ngrok-free.app"
+2024/08/01 19:02:58 [error] 15980#16848: *1 "D:\projetos\java\javaweb\nginx-1.26.1/src/main/resources/static/RealIndex.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "8919-2804-c30-fb1-8f00-e837-2cb5-cad2-84fa.ngrok-free.app"
+2024/08/01 19:02:59 [error] 15980#16848: *1 "D:\projetos\java\javaweb\nginx-1.26.1/src/main/resources/static/RealIndex.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "8919-2804-c30-fb1-8f00-e837-2cb5-cad2-84fa.ngrok-free.app"
+2024/08/01 19:40:06 [error] 9464#2588: *6 CreateFile() "D:/projetos/java/javaweb/src/main/resources/static/maquinas/90" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET /maquinas/90 HTTP/1.1", host: "8919-2804-c30-fb1-8f00-e837-2cb5-cad2-84fa.ngrok-free.app"
+2024/08/01 19:47:50 [error] 9464#2588: *7 CreateFile() "D:/projetos/java/javaweb/src/main/resources/static/maquinas/90" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET /maquinas/90 HTTP/1.1", host: "8919-2804-c30-fb1-8f00-e837-2cb5-cad2-84fa.ngrok-free.app"

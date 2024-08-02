@@ -6,5 +6,7 @@ import java.util.Optional;
 
 public interface MaquinaService {
     Maquina saveMaquina(Maquina maquina);
+    boolean existsByPatrimonio(int patrimonio);
     Optional<Maquina> getMachineById(Long id);
+    Optional<Maquina> getMachineByPatrimonio(int patrimonio);
 }

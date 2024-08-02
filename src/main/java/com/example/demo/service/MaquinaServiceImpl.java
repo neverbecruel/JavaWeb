@@ -26,4 +26,13 @@ public class MaquinaServiceImpl implements MaquinaService {
     public Optional<Maquina> getMachineById(Long id) {
         return maquinaRepository.findById(id);
     }
+    @Override
+    public boolean existsByPatrimonio(int patrimonio) {
+        return maquinaRepository.findByPatrimonio(patrimonio).isPresent();
+    }
+    @Override
+    public Optional<Maquina> getMachineByPatrimonio(int patrimonio) {
+        return maquinaRepository.findByPatrimonio(patrimonio);
+    }
+
 }
