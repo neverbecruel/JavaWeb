@@ -2,7 +2,7 @@ package com.example.demo.service;
 
 import java.time.LocalDate;
 
-public class ManutencaoProv {
+public class ManutencaoProvisoria {
     LocalDate data;
     String descricao;
     Long id;

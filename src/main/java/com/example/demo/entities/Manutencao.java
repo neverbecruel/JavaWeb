@@ -1,7 +1,6 @@
-package com.example.demo.models;
+package com.example.demo.entities;
 
 import com.sun.istack.NotNull;
-import org.apache.logging.log4j.message.StringFormattedMessage;
 
 import javax.persistence.*;
 import java.time.LocalDate;

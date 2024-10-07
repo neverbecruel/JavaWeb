@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.models.Maquina;
+import com.example.demo.entities.Maquina;
 import com.example.demo.service.MaquinaService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,13 +13,13 @@ import org.springframework.dao.DataIntegrityViolationException;
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
-public class IndexController {
+public class PostNewMachine {
 
-    private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
+    private static final Logger logger = LoggerFactory.getLogger(PostNewMachine.class);
     private final MaquinaService maquinaService;
 
     @Autowired
-    public IndexController(MaquinaService maquinaService) {
+    public PostNewMachine(MaquinaService maquinaService) {
         this.maquinaService = maquinaService;
     }
 

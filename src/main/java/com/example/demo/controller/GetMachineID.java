@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.models.Maquina;
+import com.example.demo.entities.Maquina;
 import com.example.demo.service.MaquinaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,12 +11,12 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/getIdbyPat")
 @CrossOrigin(origins = "*")
-public class getID {
+public class GetMachineID {
 
     private final MaquinaService maquinaService;
 
     @Autowired
-    public getID(MaquinaService maquinaService) {
+    public GetMachineID(MaquinaService maquinaService) {
         this.maquinaService = maquinaService;
     }
 

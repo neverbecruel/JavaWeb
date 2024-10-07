@@ -1,8 +1,8 @@
 package com.example.demo.controller;
 
-import com.example.demo.models.Manutencao;
-import com.example.demo.models.Maquina;
-import com.example.demo.service.ManutencaoProv;
+import com.example.demo.entities.Manutencao;
+import com.example.demo.entities.Maquina;
+import com.example.demo.service.ManutencaoProvisoria;
 import com.example.demo.service.ManutencaoService;
 import com.example.demo.service.MaquinaService;
 import org.slf4j.Logger;
@@ -17,21 +17,21 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
-public class ManutencaoController {
+public class PostNewManutencao {
 
-    private static final Logger logger = LoggerFactory.getLogger(ManutencaoController.class);
+    private static final Logger logger = LoggerFactory.getLogger(PostNewManutencao.class);
     private static final short MAX_DESCRIPTION_LENGTH = 255;
     private final ManutencaoService manutencaoService;
     private final MaquinaService maquinaService;
 
     @Autowired
-    public ManutencaoController(ManutencaoService manutencaoService, MaquinaService maquinaService) {
+    public PostNewManutencao(ManutencaoService manutencaoService, MaquinaService maquinaService) {
         this.manutencaoService = manutencaoService;
         this.maquinaService = maquinaService;
     }
 
     @PostMapping("/postManutencao")
-    public ResponseEntity<?> addMaintenance(@RequestBody ManutencaoProv maquina) {
+    public ResponseEntity<?> addMaintenance(@RequestBody ManutencaoProvisoria maquina) {
         try{
         logger.info("ID: {}", maquina.getId());
         logger.info("DATA: {}", maquina.getData());

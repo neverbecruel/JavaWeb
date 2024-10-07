@@ -1,7 +1,6 @@
-package com.example.demo.repositories;
+package com.example.demo.JPARepository;
 
-import com.example.demo.models.Manutencao;
-import com.example.demo.models.Manutencao;
+import com.example.demo.entities.Manutencao;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

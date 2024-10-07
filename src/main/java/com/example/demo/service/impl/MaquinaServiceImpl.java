@@ -1,7 +1,8 @@
-package com.example.demo.service;
+package com.example.demo.service.impl;
 
-import com.example.demo.models.Maquina;
-import com.example.demo.repositories.MaquinaRepository;
+import com.example.demo.entities.Maquina;
+import com.example.demo.JPARepository.MaquinaRepository;
+import com.example.demo.service.MaquinaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,4 +36,13 @@ public class MaquinaServiceImpl implements MaquinaService {
         return maquinaRepository.findByPatrimonio(patrimonio);
     }
 
+    @Override
+    public boolean deleteMaquina(Long id){
+        if (maquinaRepository.existsById(id)){
+            maquinaRepository.deleteById(id);
+            return true;
+        }else {
+            return false;
+        }
+    }
 }

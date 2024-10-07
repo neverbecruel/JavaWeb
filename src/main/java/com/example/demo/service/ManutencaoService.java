@@ -1,9 +1,8 @@
 package com.example.demo.service;
 
-import com.example.demo.models.Manutencao;
+import com.example.demo.entities.Manutencao;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ManutencaoService {
     Manutencao saveManutencao(Manutencao manutencao);

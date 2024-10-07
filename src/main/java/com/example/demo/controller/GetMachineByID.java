@@ -1,14 +1,13 @@
 package com.example.demo.controller;
 
-import com.example.demo.models.Maquina;
+import com.example.demo.entities.Maquina;
 import com.example.demo.service.MaquinaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,15 +16,14 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Optional;
 
 @Controller
-public class MaquinaController {
+public class GetMachineByID {
 
     private final MaquinaService maquinaService;
 
     @Autowired
-    public MaquinaController(MaquinaService maquinaService) {
+    public GetMachineByID(MaquinaService maquinaService) {
         this.maquinaService = maquinaService;
     }
     @CrossOrigin(origins = "*")
