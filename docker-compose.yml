@@ -1,0 +1,38 @@
+version: '3'
+services:
+  app:
+    build: .
+    container_name: java_web_app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: never
+    volumes:
+      - ./src/main/resources/static:/app/src/main/resources/static
+    networks:
+      - app_network
+
+  db:
+    image: postgres:latest
+    container_name: java_web_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: never
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  db_data:
