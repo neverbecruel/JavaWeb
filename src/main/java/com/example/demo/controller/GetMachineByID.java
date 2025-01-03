@@ -26,6 +26,7 @@ public class GetMachineByID {
     public GetMachineByID(MaquinaService maquinaService) {
         this.maquinaService = maquinaService;
     }
+
     @CrossOrigin(origins = "*")
     @GetMapping("/maquinas/{id}")
     public ResponseEntity<?> getMachineById(@PathVariable Long id) {
@@ -53,7 +54,7 @@ public class GetMachineByID {
             htmlContent = htmlContent.replace("{machineSetor}", maquina.getSetor());
             htmlContent = htmlContent.replace("{machineModelo}", maquina.getModelo());
             htmlContent = htmlContent.replace("{machineId}", maquina.getId().toString());
-            htmlContent = htmlContent.replace("{machineAgulhagem}",String.valueOf(maquina.getAgulhagem()));
+            htmlContent = htmlContent.replace("{machineAgulhagem}", String.valueOf(maquina.getAgulhagem()));
             htmlContent = htmlContent.replace("{machineDiametro}", String.valueOf(maquina.getDiametro()));
 
             // Retornar o HTML personalizado

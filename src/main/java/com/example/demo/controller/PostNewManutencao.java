@@ -32,33 +32,33 @@ public class PostNewManutencao {
 
     @PostMapping("/postManutencao")
     public ResponseEntity<?> addMaintenance(@RequestBody ManutencaoProvisoria maquina) {
-        try{
-        logger.info("ID: {}", maquina.getId());
-        logger.info("DATA: {}", maquina.getData());
-        logger.info("PROCEDIMENTO: {}", maquina.getDescricao());
+        try {
+            logger.info("ID: {}", maquina.getId());
+            logger.info("DATA: {}", maquina.getData());
+            logger.info("PROCEDIMENTO: {}", maquina.getDescricao());
 
-        if (maquina.getDescricao().length()> MAX_DESCRIPTION_LENGTH){
-            logger.warn("Descrição excede o tamanho máximo permitido de {} caracteres", MAX_DESCRIPTION_LENGTH);
-            return ResponseEntity.status(400).body("Descrição excede o tamanho máximo permitido de " + MAX_DESCRIPTION_LENGTH + " caracteres.");
-        }
+            if (maquina.getDescricao().length() > MAX_DESCRIPTION_LENGTH) {
+                logger.warn("Descrição excede o tamanho máximo permitido de {} caracteres", MAX_DESCRIPTION_LENGTH);
+                return ResponseEntity.status(400).body("Descrição excede o tamanho máximo permitido de " + MAX_DESCRIPTION_LENGTH + " caracteres.");
+            }
 
-        Optional<Maquina> machine = maquinaService.getMachineById(maquina.getId());
-        if (machine.isPresent()) {
-            Manutencao manutencao = new Manutencao();
-            manutencao.setMachine(machine.get());
-            manutencao.setDate(maquina.getData());
-            manutencao.setDescription(maquina.getDescricao());
+            Optional<Maquina> machine = maquinaService.getMachineById(maquina.getId());
+            if (machine.isPresent()) {
+                Manutencao manutencao = new Manutencao();
+                manutencao.setMachine(machine.get());
+                manutencao.setDate(maquina.getData());
+                manutencao.setDescription(maquina.getDescricao());
 
-            manutencaoService.saveManutencao(manutencao);
-            logger.info("Manutenção salva com sucesso");
-            return ResponseEntity.status(HttpStatus.CREATED).body(manutencao.getId());
-        } else {
-            logger.info("Máquina não encontrada");
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Máquina não encontrada.");
-        }
+                manutencaoService.saveManutencao(manutencao);
+                logger.info("Manutenção salva com sucesso");
+                return ResponseEntity.status(HttpStatus.CREATED).body(manutencao.getId());
+            } else {
+                logger.info("Máquina não encontrada");
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Máquina não encontrada.");
+            }
 
-    }catch (Exception e){
-        return ResponseEntity.status(500).body("Erro adicionar manutenção: " + e.getMessage());
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body("Erro adicionar manutenção: " + e.getMessage());
         }
     }
 }

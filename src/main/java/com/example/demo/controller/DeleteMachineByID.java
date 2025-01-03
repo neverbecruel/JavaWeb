@@ -13,18 +13,20 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class DeleteMachineByID {
 
     private final MaquinaService maquinaService;
+
     @Autowired
     public DeleteMachineByID(MaquinaService maquinaService) {
         this.maquinaService = maquinaService;
     }
+
     @CrossOrigin("*")
     @DeleteMapping("/maquinas/delete/{id}")
     public ResponseEntity<?> deleteMachineByID(@PathVariable Long id) {
         boolean deletado;
         deletado = maquinaService.deleteMaquina(id);
-        if (deletado){
+        if (deletado) {
             return ResponseEntity.ok().build();
-        }else{
+        } else {
             return ResponseEntity.notFound().build();
         }
     }
