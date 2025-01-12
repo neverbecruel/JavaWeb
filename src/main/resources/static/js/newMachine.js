@@ -12,11 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const toast = document.getElementById('toast');
     const MAX_PATRIMONIO = 2000000000;
 
+    function validateDiametro(){
+        let isDiametroValid = true;
+        const diametro = parseInt(elements.diametro.value)
+        if (isNaN(diametro) || diametro < 3 || diametro > 24){
+            isDiametroValid = false;
+        }
+        return isDiametroValid
+    }
+
     function validateFields() {
         let isValid = true;
-
         // Hide all error messages initially
-        // Validate each field and show the relevant error message
+
+        // Validar cada campo e retornar mensagem de erro equivalente
         if (elements.numero.value.trim() === '') {
             isValid = false;
         } else if (elements.setor.value.trim() === '') {
@@ -25,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
         } else {
             const patrimonio = parseInt(elements.patrimonio.value);
+
             if (isNaN(patrimonio) || patrimonio > MAX_PATRIMONIO) {
                 isValid = false;
             } else if (elements.agulhagem.value.trim() === '') {
@@ -41,11 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
         toast.classList.add('show');
         setTimeout(() => {
             toast.classList.remove('show');
-        }, 3000); // Hide the toast after 3 seconds
+        }, 3000); // Esconder o toast depois de 3 segundos
     }
 
     function submitMachineData() {
-        if (validateFields()) {
+        if (validateFields() && validateDiametro()) {
             const machineData = {
                 numeroMaquina: parseInt(elements.numero.value),
                 setor: elements.setor.value,
@@ -89,8 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.error('Erro ao adicionar máquina. Status:', error.status || 'Desconhecido', 'Mensagem:', error.message);
                     showToast('Erro ao adicionar máquina. Verifique o console para mais detalhes.');
                 });
+        }if (!validateDiametro()){
+            showToast("Diâmetro não deve ser maior que 24 ou menor que 3.")
+
         } else {
-            showToast("Por favor, preencha todos os campos.");
+            showToast("Por favor, preencha todos os campos.")
         }
     }
 

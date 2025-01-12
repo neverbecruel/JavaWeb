@@ -136,7 +136,7 @@ button:hover {
     align-items: center; /* Centraliza verticalmente */
     max-width: 100%; /* Ajusta a largura do QR code para caber melhor no modal */
     max-height: 60vh; /* Limita a altura máxima do QR code */
-    margin-bottom: 20px; /* Espaçamento abaixo do QR code */
+    margin-bottom: 15px; /* Espaçamento abaixo do QR code */
 }
 
 .modal-content .qrcode-text {

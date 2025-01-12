@@ -26,7 +26,7 @@ public class PostNewMachine {
     @PostMapping("/maquinas")
     public ResponseEntity<?> criarMaquina(@RequestBody Maquina maquina) {
         try {
-            logger.info("Receiving request to create machine: {}", maquina);
+            logger.info("Recebendo dados para a criação da máquina: {}", maquina);
 
             // Validar se o patrimônio já existe
             if (maquinaService.existsByPatrimonio(maquina.getPatrimonio())) {
