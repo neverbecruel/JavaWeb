@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     showToast('Erro ao adicionar máquina. Verifique o console para mais detalhes.');
                 });
         }if (!validateDiametro()){
-            showToast("Diâmetro não deve ser maior que 24 ou menor que 3.")
+            showToast("Valor de diâmetro inválido.")
 
         } else {
             showToast("Por favor, preencha todos os campos.")
